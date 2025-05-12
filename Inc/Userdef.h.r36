@@ -1,0 +1,533 @@
+/*******************************************************************************
+* Filename: KSDsys.h 	                                       		           *
+* Description: 系统定义		           				                           *
+* Author:                                                                      *
+* Date:     														           *
+* Revision:															           *
+*******************************************************************************/
+#ifndef _USERDEF_H_
+#define _USERDEF_H_
+
+//#define	LOG_ENABLE   /* 串口调试信息使能 */
+
+
+/***************************************** USER_TYPE *****************************************/
+//********实验台测试程序
+#define USER_TEST_4825_HB4_GD32				1
+
+//********用户程序
+
+/*中立堆高车*/
+#define	USER_ZHONGLI_DGC					101
+
+/*港力堆高车*/
+#define	USER_GANGLI_DGC						102
+
+/*如意堆高车RS*/
+#define USER_RUYI_DGC						103
+
+/*如意堆高车CQD*/
+#define USER_STACKERTRUNK_RUYI_CQDH15A 		104
+
+/*诺力堆高车PS16*/
+#define USER_NUOLI_PS16						105 
+
+/*诺力堆高车RT15Q*/
+#define	USER_NUOLI_RT15Q					106
+
+/*加力堆高车*/
+#define USER_JIALI_15TJDC					107
+
+/*杭叉坡道车*/
+#define USER_HANGCHA_PODAOCHE				108
+
+/*强盛堆高车*/
+#define USER_QIANGSHENG_DGC					109
+
+/*塞伊斯臂车*/
+#define USER_SDSAIYISI_BICHE_ZUO_MOVE		110
+#define USER_SDSAIYISI_BICHE_YOU_SMOVE      111
+/**/
+#define USER_SDSAIYISI_LDJCC_MOVE			112
+#define USER_SDSAIYISI_LDJCC_SMOVE			113
+
+/*港力平衡重*/
+#define USER_GANGLI_PHZ15T_MOVE				114
+#define USER_GANGLI_PHZ15T_LIFT				115
+
+/*科力电动托盘车*/
+#define USER_KELI_DDTPC						116
+
+/*科力座驾大前移*/
+#define USER_KELI_ZJDQY_MOVE				117
+#define USER_KELI_ZJDQY_LIFT 				118
+
+/*三一堆高车*/
+#define USER_SANYI_DGC						119
+/**/
+#define USER_JIALI_Q20GA					120
+/*加力三直流*/
+#define USER_JIALI_SanZhiLiu				121
+/*加力三支点平衡重*/
+#define USER_JIALI_SZDPHZ					122
+
+/*盛视科技 AGV*/
+#define	USER_MAXVISION_AGV					123
+
+/*仙工智能 AGV*/
+#define USER_SHXIANGONG_AGV					124	
+
+/*山东坤宇液压升降平台-三直流*/
+#define USER_SHANDONGKUNTYU_LOGIC 			125
+
+/*山东矗峰二合一升降平台*/
+#define USER_CHUFENG_2IN1_LOGIC				126
+
+/*柳工液驱剪叉升降平台二合一*/
+#define USER_FORKLIFT_LIUGONG				127
+
+/* 徐工 液驱剪叉车(永磁同步) 2425_HD4_GD32 */
+#define USER_FORKLIFT_XUGONG				128
+
+/* 徐工 三直流剪叉车(四合一) 2425_HB6_GD32 */
+#define USER_XUGONG_3DC_JCC			129
+ 
+/*如意CDD15C*/
+#define USER_RUYI_CDD15C					130
+
+/*杭叉堆垛车和搬运车*/
+#define USER_HANGCHA_DGC					131
+
+/*杭叉前移式堆高车*/
+#define USER_HANGCHA_QYDGC				132
+
+/*杭叉平衡重（与堆高车类似）*/
+#define USER_HANGCHA_PHZ					133
+
+/*马希尔堆高车*/
+#define USER_MAXIER_DGC					134
+
+/*如意 15A-3*/
+#define USER_RUYI15A3_DGC					135
+
+/* 港力 2T堆高车*/
+#define USER_HANGLI_20TDGC				136
+/***************************************** USER_TYPE *****************************************/
+
+#define USER_TYPE							USER_HANGCHA_PHZ
+
+/***************************************** USER_TYPE *****************************************/
+
+/* PCU_TYPE */
+#define	PCU_TYPE_NONE		0				/*无PCU*/
+#define	PCU_TYPE_LZ			1				/*乐詹手柄协议*/
+#define	PCU_TYPE_BEIGU		2				/*北谷手柄协议*/
+#define	PCU_TYPE_WEIKA		3				/*威卡手柄协议*/
+#define PCU_TYPE_XUGONG		4				/*徐工手柄*/
+#define PCU_TYPE_AUTO		15				/*自识别手柄（兼容协议）*/
+   
+/* LOGIC_TYPE */
+#define 	_CONTROLLER_MOVE					0
+#define 	_CONTROLLER_LIFT					1
+#define 	_CONTROLLER_STEER					2
+#define 	_CONTROLLER_MOVE_SECOND				3
+#define 	_CONTROLLER_LOGIC					4
+#define 	_CONTROLLER_HMI						5
+#define 	_CONTROLLER_PC						6
+#define 	_CONTROLLER_UNDEF					15
+
+/* DRIVER_TYPE */
+#define	_2425_HB4_GD32					1  //HB4 标准控制板 24V
+#define	_4825_HB4_GD32					2  //HB4 标准控制板 48V
+#define	_2425_HD4_GD32					3  //HD4 永磁同步 旋变接口 24V
+#define	_4825_HD4_GD32					4  //HD4 永磁同步 旋变接口 48V
+#define	_2412_HB6_GD32					5  //HB6 DO高边驱动 三直流专用 24V
+
+/* CTLBOARD_TYPE*/
+#define	_HB4_GD32					1  //HB4 标准控制板 (GD32F303VCT6)
+#define	_HD4_GD32					2  //HD4 永磁同步 旋变接口 (GD32F303VCT6)
+#define _HB6_GD32					3  //HB6 DO高边驱动 三直流专用 (GD32F303VCT6)
+
+/* VOLTAGE_LEVEL */
+#define _VOLTAGE_24V		1		//24V
+#define _VOLTAGE_48V		2		//48V
+#define _VOLTAGE_72V		4		//72V
+#define _VOLTAGE_80V		5		//80V
+#define _VOLTAGE_88V		6		//88V
+
+//********用户通用设置
+#if(1)
+	#define LOGIC_TYPE			_CONTROLLER_LOGIC
+	#define STEER_TYPE			STEER_STEER_DRV
+
+	#define BATTERY_ALARM_RATIO      15
+	#define BATTERY_PROTECT_RATIO    10
+	#define DIFF_BETWEEN_LIBAT_PBBAT  0     
+#endif
+
+
+/*矗峰二合一液驱剪叉车*/
+#if (USER_TYPE == USER_CHUFENG_2IN1_LOGIC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_LZ  
+#endif
+
+#if (USER_TYPE == USER_SHXIANGONG_AGV)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+#if (USER_TYPE == USER_MAXVISION_AGV)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_500K
+#define CANOPEN_NODEID	0x08
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+#if (USER_TYPE == USER_KELI_DDTPC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*港力平衡重*/
+#if (USER_TYPE == USER_GANGLI_PHZ15T_LIFT)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+#if (USER_TYPE == USER_GANGLI_PHZ15T_MOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+#if (USER_TYPE == USER_SDSAIYISI_LDJCC_SMOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+#if (USER_TYPE == USER_SDSAIYISI_LDJCC_MOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*山东塞伊斯臂车*/
+#if (USER_TYPE == USER_SDSAIYISI_BICHE_ZUO_MOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+#if (USER_TYPE == USER_SDSAIYISI_BICHE_YOU_SMOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*杭叉坡道车*/
+#if (USER_TYPE == USER_HANGCHA_PODAOCHE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+/*中立堆高车*/
+#if (USER_TYPE == USER_ZHONGLI_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+ 
+#endif
+
+/*港立堆高车*/
+#if (USER_TYPE == USER_GANGLI_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+ 
+#endif
+
+
+/*诺力堆高车*/
+#if (USER_TYPE == USER_NUOLI_PS16)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+ 
+#endif
+
+/*浙江加力 剪刀车*/
+#if (USER_TYPE == USER_JIALI_15TJDC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+ 
+#endif
+
+/*江苏科力 电动托盘车 */
+#if (USER_TYPE == USER_KELI_DDTPC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*江苏科力 大前移 行走 */
+#if (USER_TYPE == USER_KELI_ZJDQY_MOVE)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*江苏科力 大前移 起升 */
+#if (USER_TYPE == USER_KELI_ZJDQY_LIFT)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x10
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*三一机器人 堆高车 */
+#if (USER_TYPE == USER_SANYI_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*浙江加力 Q20 */
+#if (USER_TYPE == USER_JIALI_Q20GA)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate	 CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*浙江加力 三直流拣选车 */
+#if (USER_TYPE == USER_JIALI_SanZhiLiu)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define Differential_SANZHILIU
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*浙江加力 三支点平衡重 */
+#if (USER_TYPE == USER_JIALI_SZDPHZ)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_125K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE  
+#endif
+
+/*杭叉堆垛车和搬运车*/
+#if (USER_TYPE == USER_HANGCHA_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_125K
+#define CAN_NoteID	0x2C
+//#define DDC_IOTYPE        //堆高车使用此宏
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+/*杭叉前移式堆高车*/
+#if (USER_TYPE == USER_HANGCHA_QYDGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_125K
+#define CAN_NoteID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+/*杭叉平衡重（与堆高车类似）*/
+#if (USER_TYPE == USER_HANGCHA_PHZ)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_500K
+#define CAN_NoteID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+/*港力 2T堆高车*/
+#if (USER_TYPE == USER_HANGLI_20TDGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_250K
+#define CAN_NoteID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+
+#if (USER_TYPE == USER_RUYI_CDD15C)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_250K
+#define CAN_NoteID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+
+//电池曲线与复位电压采用默认值
+#define SOC_IN_1PERCENT
+#define BATERRY_VOLTAGE_RUYI
+#define	OPENVOLT_80_SPEC		_IQ((29.00*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_60_SPEC		_IQ((25.70*STD_VOLTAGE) / (STD_VBUS*24.0))
+	#define BATTERY_ALARM_RATIO      15
+	#define BATTERY_PROTECT_RATIO    10
+	#define DIFF_BETWEEN_LIBAT_PBBAT  0  
+#endif
+
+#if (USER_TYPE == USER_RUYI15A3_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_250K
+#define CAN_NoteID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+
+//电池曲线与复位电压采用默认值
+#define SOC_IN_1PERCENT
+#define BATERRY_VOLTAGE_RUYI
+#define	OPENVOLT_80_SPEC		_IQ((29.00*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_60_SPEC		_IQ((25.70*STD_VOLTAGE) / (STD_VBUS*24.0))
+	#define BATTERY_ALARM_RATIO      15
+	#define BATTERY_PROTECT_RATIO    10
+	#define DIFF_BETWEEN_LIBAT_PBBAT  0  
+#endif
+
+/*宁波如意堆高车RS*/
+#if (USER_TYPE == USER_RUYI_DGC)
+
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+
+//电池曲线与复位电压采用默认值
+#define SOC_IN_1PERCENT
+#define BATERRY_VOLTAGE_RUYI
+#define	OPENVOLT_80_SPEC		_IQ((29.00*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_60_SPEC		_IQ((25.70*STD_VOLTAGE) / (STD_VBUS*24.0))
+	#define BATTERY_ALARM_RATIO      15
+	#define BATTERY_PROTECT_RATIO    10
+	#define DIFF_BETWEEN_LIBAT_PBBAT  0     
+#endif
+
+/*宁波如意堆高车CQD*/
+#if (USER_TYPE == USER_STACKERTRUNK_RUYI_CQDH15A)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define SOC_IN_1PERCENT
+#define BATERRY_VOLTAGE_RUYI
+#define	OPENVOLT_80_SPEC		_IQ((29.00*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_60_SPEC		_IQ((25.70*STD_VOLTAGE) / (STD_VBUS*24.0))
+	#define BATTERY_ALARM_RATIO      15
+	#define BATTERY_PROTECT_RATIO    10
+	#define DIFF_BETWEEN_LIBAT_PBBAT  0     
+#endif
+
+/*柳工二合一液驱剪叉车*/
+#if(USER_TYPE == USER_FORKLIFT_LIUGONG)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define BATERRY_VOLTAGE_LIUGONG
+#define OPENVOLT_SPEC			 _IQ((25.45*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_45_SPEC	 _IQ((25.50*STD_VOLTAGE) / (STD_VBUS*24.0))
+
+#define PCU_TYPE PCU_TYPE_LZ
+
+#endif
+
+/*山东坤宇液压升降平台-三直流*/
+/*由于版本更新，此程序存在较多问题*/
+#if(USER_TYPE == USER_SHANDONGKUNTYU_LOGIC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define BATERRY_VOLTAGE_KUNYU
+#define OPENVOLT_SPEC			 _IQ((25.45*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_45_SPEC	 _IQ((25.50*STD_VOLTAGE) / (STD_VBUS*24.0))
+ 
+ #define PCU_TYPE PCU_TYPE_LZ
+#endif
+
+/*强盛堆高车*/
+#if (USER_TYPE == USER_QIANGSHENG_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+#define BATERRY_VOLTAGE_LOW6V
+#endif
+
+
+/* 徐工 液驱剪叉车(永磁同步) 2425_HD4_GD32 */
+#if(USER_TYPE == USER_FORKLIFT_XUGONG)
+#define	DRIVER_TYPE		_2425_HD4_GD32
+#define PCU_TYPE	PCU_TYPE_XUGONG
+#define BATERRY_VOLTAGE_XUGONG
+
+#define OPENVOLT_SPEC			 _IQ((25.45*STD_VOLTAGE) / (STD_VBUS*24.0))
+#define OPENVOLT_45_SPEC	 _IQ((25.50*STD_VOLTAGE) / (STD_VBUS*24.0))
+#endif
+
+/* 仙工智能 AGV行走 2425_HB4_GD32 */
+#if (USER_TYPE == USER_XIANGONG_AGV)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_NONE 
+#endif
+
+/* 徐工 三直流剪叉车(四合一) 2425_HB6_GD32 */
+#if (USER_TYPE == USER_XUGONG_3DC_JCC)
+#define	DRIVER_TYPE		_2425_HB6_GD32
+#define CAN_Baudrate CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define	PCU_TYPE			PCU_TYPE_XUGONG
+
+#endif
+
+/*玛西尔堆高车*/
+#if (USER_TYPE == USER_MAXIER_DGC)
+#define	DRIVER_TYPE		_2425_HB4_GD32
+#define CAN_Baudrate 	CAN_BAUD_RATE_250K
+#define CANOPEN_NODEID	0x2C
+#define SOFTVERSION_LOGIC   0x01
+
+#define	PCU_TYPE			PCU_TYPE_NONE  
+ 
+#endif
+
+
+#endif //#ifndef _USERDEF_H_
+

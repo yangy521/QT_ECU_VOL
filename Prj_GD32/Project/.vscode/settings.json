@@ -1,0 +1,14 @@
+{
+    "C_Cpp.default.compilerPath": "c:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\gcc.exe",
+    "files.associations": {
+        "userecuproc.h": "c",
+        "def.h": "c",
+        "aiproc.h": "c",
+        "alarmlamp.h": "c",
+        "pcuproc.h": "c",
+        "usercommon.h": "c",
+        "para.h": "c",
+        "user_liugong_forklift_2in1.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
